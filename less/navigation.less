@@ -1,4 +1,4 @@
-// Navigation Styles here
+// Navigation Styles here for Header
 
 .navigate {
     display:flex;
@@ -12,11 +12,25 @@
     width: 100%;
     margin: 0 auto;
 
+    @media @mobile {
+        max-width:500px;
+        flex-direction:column;
+        align-content:center;
+    }
+
     nav {
         display:flex;
         width:35%;
         justify-content:space-between;
         margin-right:2%;
+
+        @media @mobile {
+            width:100%;
+            margin-top:10px;
+            display:flex;
+            justify-content:space-around;
+        }
+
 
         a {
             text-decoration: none;

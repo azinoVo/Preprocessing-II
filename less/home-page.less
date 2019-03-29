@@ -10,11 +10,23 @@
     width: 100%;
     margin: 0 auto;
 
+
     img {
-      margin-bottom:1.15rem;
+      margin-bottom:1.25rem;
+
+      @media @mobile {
+        width:90%;
+        margin-left:5%;
+        
+    }
     }
 
     .intro {
+        @media @mobile {
+          width:90%;
+          margin-left:5%;
+        }
+          
       p {
         border-bottom: 0.2rem dashed lightgrey;
       }
@@ -33,19 +45,33 @@
     flex-wrap: wrap;
     justify-content: space-between;
 
-   
-    
+    @media @mobile {
+      display:flex;
+      flex-direction:column;
+      align-content:left;
+      margin:10px 0;
+    }
+
     .text-content {
       width: 48%;
       padding-right: 1%;
+
+      @media @mobile {
+        width:90%;
+      }
     }
 
     .img-content {
       width: 48%;
       padding-left: 1%;
 
+      @media @mobile {
+        width:100%;
+      }
+
       img {
         border-radius: 10px;
+        }
       }
     }
   }
@@ -54,9 +80,19 @@
     padding-bottom: 30px;
     border-bottom: 2px dashed @navigation-border;
 
+    @media @mobile {
+      display:flex;
+      flex-direction:column-reverse;
+    }
+
     .text-content {
       padding-left: 1%;
       padding-right: 0;
+
+      @media @mobile {
+        margin-top:15px;
+      }
+
     }
 
     .img-content {
@@ -69,24 +105,43 @@
     width: 75%;
     margin: 0 auto 30px;
 
+    @media @mobile {
+      width:90%;
+      margin-left:5%;
+    }
+
     img {
       border-radius: 10px;
     }
   }
 
   .content-pick {
+
     padding-top: 30px;
     border-top: 2px dashed @navigation-border;
     display: flex;
     justify-content: space-between;
 
+    @media @mobile {
+      display:flex;
+      flex-direction:column;
+    }
+
     .destination {
       width: 30%;
       margin-bottom: 30px;
 
+      @media @mobile {
+        width:80%;
+        margin:5px auto;
+      }
+
       .btn {
         .buttonStyle (white, teal, 1.25rem);
+
+        @media @mobile {
+          background-color:@eastern-blue;
+        }
       }
     }
   }
-}// home
